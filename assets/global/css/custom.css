@@ -1,0 +1,56 @@
+.emojiPicker {
+    top: 715px !important;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.07) !important;
+    background-color: #15192c !important;
+}
+
+.emojiPicker nav{
+    display: none !important;
+}
+
+.emojiPicker .shortcode{
+    display: none !important;
+}
+
+.emojiPicker .sections{
+    height: 202px !important;
+    overflow: hidden !important;
+    overflow-y: scroll !important;
+}
+
+
+
+.testi-slider{
+    height:  280px !important;
+}
+  
+  
+
+.ratting-progres-5 {
+        width: 100%;
+}
+.ratting-progres-4 {
+    width: 70%;
+}
+.ratting-progres-3 {
+    width: 40%;
+}
+.ratting-progres-2 {
+    width: 25%;
+}
+.ratting-progres-1 {
+    width: 15%;
+}
+
+.daterangepicker .drp-calendar {
+    display: none;
+    max-width: unset !important;
+}
+
+
+  
+  
+
+  
+  
+

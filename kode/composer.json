@@ -1,0 +1,103 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "abraham/twitteroauth": "^7.0",
+        "akaunting/laravel-firewall": "^2.2",
+        "authorizenet/authorizenet": "^2.0",
+        "btcpayserver/btcpayserver-greenfield-php": "^2.0",
+        "coderjerk/bird-elephant": "^0.7.0",
+        "coingate/coingate-php": "^3.0",
+        "ezyang/htmlpurifier": "^4.18",
+        "gregwar/captcha": "1.*",
+        "guzzlehttp/guzzle": "^7.2",
+        "infobip/infobip-api-php-client": "^3.2",
+        "intervention/image": "^2.7",
+        "janu-software/facebook-php-sdk": "^0.2.1",
+        "karim007/laravel-bkash-tokenize": "^1.0",
+        "laravel/framework": "^10.10",
+        "laravel/sanctum": "^3.2",
+        "laravel/slack-notification-channel": "^2.5",
+        "laravel/socialite": "^5.5",
+        "laravel/tinker": "^2.8",
+        "league/flysystem-aws-s3-v3": "^3.15",
+        "league/flysystem-ftp": "3.0",
+        "messagebird/php-rest-api": "^3.1",
+        "mollie/laravel-mollie": "^2.14",
+        "orhanerday/open-ai": "^4.9",
+        "phpseclib/phpseclib": "~3.0",
+        "predis/predis": "^2.2",
+        "sendgrid/sendgrid": "~7",
+        "sentry/sentry-laravel": "^3.5",
+        "socialiteproviders/instagram": "^5.0",
+        "socialiteproviders/linkedin": "^4.2",
+        "socialiteproviders/tiktok": "^5.1",
+        "socialiteproviders/twitter": "^4.1",
+        "socialiteproviders/youtube": "^4.1",
+        "spatie/laravel-csp": "^2.10",
+        "textmagic/sdk": "dev-master",
+        "twilio/sdk": "^6.37",
+        "vonage/client": "^2.4"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
+        "fakerphp/faker": "^1.9.1",
+        "laravel/pint": "^1.0",
+        "laravel/sail": "^1.18",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^7.0",
+        "phpunit/phpunit": "^10.1",
+        "spatie/laravel-ignition": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files":[
+            "app//Http//Helper//helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true,
+            "ocramius/package-versions": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
